@@ -1,0 +1,15 @@
+{% extends "blog/basis.html" %}
+
+{% block branding %}
+    {{branding}}
+{% endblock branding %}
+
+{% block content %}
+    <ul>
+        {% for eintrag in blog %}
+            <li><h2><a href="details/{{eintrag.pk}}">{{eintrag}}</a></h2></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
+
