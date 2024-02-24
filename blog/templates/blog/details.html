@@ -1,0 +1,14 @@
+{% extends "blog\basis.html" %}
+
+{% block content %}
+    <h2>Ausgewählter Datensatz</h2>
+    <p>Primary Key: {{ds.id}}
+    <p>Überschrift: {{ds.header}}
+    <p>Inhalt: {{ds.content}}
+    <p>Bewertung: {{ds.rating}}
+    <p>Erstellt: {{ds.created}}
+    <p>Geändert: {{ds.changed}}
+    <p>Benutzer: {{ds.user}}
+    <p>Benutzer ID: {{ds.user.pk}}
+
+{% endblock content %}

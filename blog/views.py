@@ -13,4 +13,15 @@ def start(request):
       'user': request.user,
       'blog': blog,
    }
-   return render(request, 'blog/start.html', contents) 
+   return render(request, 'blog/start.html', contents)
+
+def details(request, id):
+   ds = Blog.objects.get(pk=id)
+   
+   contents = {
+      'branding': 'vfb-weiterbildung.de',
+      'user': request.user,
+      'ds': ds,
+   }
+   return render(request, 'blog/details.html', contents)
+
